@@ -1,0 +1,57 @@
+Part 1: 30%, you must create a repo for part 1, separate from part 2
+ 
+1. Why does React utilize the virtual-dom?
+Ans. Virtual DOM enhances the performance that is why react uses virtual DOM. In a real DOM the whole pages is loaded every time the data is changed but in virtual dom only the part of the page where the change has occured will be loaded. 
+A virtual dom is a light weight Javascript object which is basically copying the real dom. So basically whenever any underlying data changes, the entire UI is re-rendered in virtual Dom then the difference between the previous DOM representation and the new one is calculated. Once the calculations are done, the real DOM will be update with only the things that have actually changed. 
+ 
+2a. How is data flowed in React? 
+Ans. In React the data flow's in uni-directional manner i.e it flows in one-way which basically mean the data has only one way to be transferred to the other parts of the application.
+
+2b. Why is React architected this way?
+Ans. Architecting react this way has some advantages i.e it is easier to debug the application when needed as developers know the flow of the data. it’s less error prone, as developers have more control over your data and it’s more efficient, as the library already knows what the boundaries are of each part of the system.
+
+3. What is the purpose for lifting state up in React? Give an example of this
+Ans. Sometime's there is a need to share state between different components. The common approach to share state between two components is to move the state to common parent of the two components. This approach is called as lifting state up in React.js
+
+Example 1: If we have 2 components in our App. A -> B where, A is parent of B. keeping the same data in both Component A and B might cause inconsistency of data. 
+
+4. Why would a startup be interested in applying React-Routing to a project? Explain in detail.
+Ans. The performance on the frontend of a website is directly affected by things like the number of pages loaded initially, the amount of data fetched and displayed, and the time taken to switch from one page to another. React routing offers following advantages, 
+    - Routing between components is fast as the amount of data that renders is less. The rest of the data is rendered by the DOM, and even when there's tons of HTML and CSS to render, the DOM handles that part in the blink of an eye. Using lazy loading, any delay in rendering HTML is compensated for.
+    - For better user experience, animations and transitions can be easily implemented when switching between different components.
+    - It gives a real sense of a single-page application in action. No separate pages are rendered, and the current page doesn't refresh to load a new view.
+
+In short, React routing offers better performance and speed. 
+
+5. Can browsers read JSX? Why?
+Ans. JSX is basically using html with javascript together but JSX is not considered as proper javascript thats why browsers cannot read them and also there is no inherent implementation for the browser engines. Jsx needs to be compiled before the browser can understand it, and this is done through jsx compiler.
+
+6. What is the significance of keys in React? 
+Ans. Keys help react identify and track which items have changed, added or removed.
+
+
+7. What is the difference between Props and State?
+Ans. Prop's are the properties that react function accepts as an attribute. While state is what keeps track of changes in the data. Props are read-only, states changes can be asynchronous. Props are immutable and states are mutable. props allows you to pass data from one component to another while state holds the data about the component.
+
+
+8. Examine the code below: In relation to React, explain what is occurring, and why it’s significant. 
+ 
+Babel Input: ES2015 arrow function
+[1, 2, 3].map( n => n + 1 )
+ 
+Babel Output: ES5 equivalent
+[1,2,3].map(function(n) {
+Return n + 1;
+})
+ 
+9. Given an array of strings, names, return a new array with each name properly capitalized. Must use .map() 
+Show 3 test runs, with at least 2 edge cases. 
+function properNames(names) {
+ 
+}
+ 
+10. Given an array of strings, return a new array that only includes those that are 6 characters or fewer in length. Must use .filter()
+Show 3 test runs, with at least 2 edge cases. 
+Function smallWordsOnly(arr) {
+ 
+} 
