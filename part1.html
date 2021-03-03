@@ -13,7 +13,7 @@ Ans. Architecting react this way has some advantages i.e it is easier to debug t
 3. What is the purpose for lifting state up in React? Give an example of this
 Ans. Sometime's there is a need to share state between different components. The common approach to share state between two components is to move the state to common parent of the two components. This approach is called as lifting state up in React.js
 
-Example 1: If we have 2 components in our App. A -> B where, A is parent of B. keeping the same data in both Component A and B might cause inconsistency of data. 
+Example: If we have 2 components in our App. A -> B where, A is parent of B. keeping the same data in both Component A and B might cause inconsistency of data. 
 
 4. Why would a startup be interested in applying React-Routing to a project? Explain in detail.
 Ans. The performance on the frontend of a website is directly affected by things like the number of pages loaded initially, the amount of data fetched and displayed, and the time taken to switch from one page to another. React routing offers following advantages, 
@@ -50,7 +50,10 @@ Ans. Basically for every element in the array react is going to add +1 to it and
 9. Given an array of strings, names, return a new array with each name properly capitalized. Must use .map() 
 Show 3 test runs, with at least 2 edge cases. 
 function properNames(names) {
- 
+    names.map((input) => {
+        input = input.charAt(0).toUpperCase()
+    })
+        
 }
  
 10. Given an array of strings, return a new array that only includes those that are 6 characters or fewer in length. Must use .filter()
